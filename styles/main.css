@@ -153,10 +153,10 @@ img {
 }
 
 .logo img {
-     height: 50px;
-     max-height: 50px;
-     width: auto;
-     max-width: 250px;
+     height: 30px !important;
+     max-height: 30px !important;
+     width: auto !important;
+     max-width: 180px;
      object-fit: contain;
 }
 
