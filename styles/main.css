@@ -153,8 +153,9 @@ img {
 }
 
 .logo img {
-  height: 50px;
-  width: auto;
+     height: 35px !important;
+     max-height: 35px !important;
+     width: auto !important;
 }
 
 .nav-links {
