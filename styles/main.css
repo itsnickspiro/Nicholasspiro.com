@@ -153,9 +153,11 @@ img {
 }
 
 .logo img {
-     height: 35px !important;
-     max-height: 35px !important;
-     width: auto !important;
+     height: 50px;
+     max-height: 50px;
+     width: auto;
+     max-width: 250px;
+     object-fit: contain;
 }
 
 .nav-links {
