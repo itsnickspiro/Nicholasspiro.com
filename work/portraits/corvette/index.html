@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corvette | Spiro Productions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/project-layout.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="/" class="logo"><img src="../../../assets/images/spiro_logo.png" alt="Spiro Productions Logo"></a>
+            <div class="mobile-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/work" class="active">Work</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <header class="project-header" style="background-image: url('../../../assets/images/Corvette/Edit-Sydney%20Spiro-08-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg');">
+            <div class="project-title fade-in">
+                <h1>Corvette</h1>
+                <p>Automotive Photography</p>
+                <a href="/work" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Work</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="gallery-grid fade-in">
+                    <!-- Corvette Images -->
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-08-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 1"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-09-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 2"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-10-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 3"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-11-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 4"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-12-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 5"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-13-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 6"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-14-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 7"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-15-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 8"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-16-topaz-denoise-focus-color-remove-sharpen-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 9"></div>
+                    <div class="gallery-item" onclick="openLightbox(this)"><img src="../../../assets/images/Corvette/Edit-Sydney%20Spiro-17-topaz-denoise-denoise-color-sharpen-denoise-color-sharpen-denoise-color-sharpen.jpg" alt="Corvette 10"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Lightbox Image">
+            </div>
+        </div>
+    </main>
+
+    <footer><div class="container"><p class="footer-bottom">&copy; 2024 Spiro Productions</p></div></footer>
+    <script src="../../../js/main.js"></script>
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+</body>
+</html>

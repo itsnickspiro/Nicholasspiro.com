@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2E2 Collection | Spiro Productions</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="C2E2 Collection | Spiro Productions">
+    <meta property="og:description" content="Cosplay portraits from C2E2 including Cyan Spartan, Spiderman, and more.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <link rel="stylesheet" href="../../../styles/project-layout.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="/" class="logo"><img src="../../../assets/images/spiro_logo.png" alt="Spiro Productions Logo"></a>
+            <div class="mobile-toggle"><i class="fa-solid fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/work" class="active">Work</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <header class="project-header" style="background-image: url('../../../assets/images/Cyan%20Spartan/Cyan%20Spartan.jpg');">
+            <div class="project-title fade-in">
+                <h1>C2E2 Collection</h1>
+                <p>Cosplay Portraiture</p>
+                <a href="/work" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Work</a>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="gallery-grid fade-in">
+                    <!-- Gallery Items -->
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="../../../assets/images/Cyan%20Spartan/Cyan%20Spartan.jpg" alt="Cyan Spartan">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="../../../assets/images/Spider-Man%20&%20Gwen/Spider-Man%20&%20Gwen.jpg" alt="Spider-Man & Gwen">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="../../../assets/images/Cade%20Bane/Cade%20Bane.jpg" alt="Cade Bane">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="../../../assets/images/Jay%20&%20Silent%20Bob/Jay%20&%20Silent%20Bob.jpg" alt="Jay & Silent Bob">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this)">
+                        <img src="../../../assets/images/Jedi%20Temple%20Guard/Jedi%20Temple%20Guard.jpg" alt="Jedi Temple Guard">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Lightbox Image">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"><p class="footer-bottom">&copy; 2024 Spiro Productions</p></div>
+    </footer>
+    
+    <script src="../../../js/main.js"></script>
+    <script>
+        // Custom Lightbox Logic for Gallery
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+</body>
+</html>
